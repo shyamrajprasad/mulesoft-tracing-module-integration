@@ -5,6 +5,8 @@ Tracing module enables you to enhance your logs by adding, removing, and clearin
 * Remove a logging variable from logging context.
 * Set logging variables to logging context.
 * Modify the correlation ID during flow execution
+# MDC logging
+MDC Logging: Mapped Diagnostic Context (MDC) enriches logging and improves tracking by providing more context or information in the logs for the current Mule event. By default, Mule logs two MDC entries: processor, which shows the location of the current event, and event, which shows the correlation ID of the event.  Open the log4j.xml file and Replace ```[processor: %X{processorPath}; event: %X{correlationId}] ``` with ```[%MDC]```.
 
 # Steps to run application
  * Clone the repo
